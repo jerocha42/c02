@@ -6,7 +6,7 @@
 /*   By: jerocha- <jerocha-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 16:01:54 by jerocha-          #+#    #+#             */
-/*   Updated: 2026/04/12 16:04:17 by jerocha-         ###   ########.fr       */
+/*   Updated: 2026/04/12 21:37:04 by jerocha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,43 +31,43 @@ int	ft_str_is_alpha(char *str)
 	int	is_alpha;
 
 	i = 0;
-	is_alpha = 0;
 	if (is_char_empty(str[0]))
-		is_alpha = 1;
+		return (1);
 	while (str[i] != '\0')
 	{
-		if (is_char_a_letter(str[i]))
+		if (!is_char_a_letter(str[i]))
 		{
-			is_alpha = 1;
+			return (0);
 		}
 		i = i + 1;
 	}
-	return (is_alpha);
+	return (1);
 }
 
 /*
-** int	tests(void)
-** {
-** 	printf("Should return 1 when string is ''\n");
-** 	printf("%d\n", (ft_str_is_alpha("")));
-** 	printf("Should return 1 when string is 'a'\n");
-** 	printf("%d\n", (ft_str_is_alpha("a")));
-** 	printf("Should return 1 when string is 'abz'\n");
-** 	printf("%d\n", (ft_str_is_alpha("abz")));
-** 	printf("Should return 1 when string is 'CASA'\n");
-** 	printf("%d\n", (ft_str_is_alpha("CASA")));
-** 	printf("Should return 1 when string is 'Z'\n");
-** 	printf("%d\n", (ft_str_is_alpha("Z")));
-** 	printf("Should return 0 when string is '5'\n");
-** 	printf("%d\n", (ft_str_is_alpha("5")));
-** 	printf("Should return 0 when string is '?'\n");
-** 	printf("%d\n", (ft_str_is_alpha("?")));
-** }
-** 
-** int	main(void)
-** {
-** 	tests();
-** 	return (0);
-** }
-** 
+void	tests(void)
+{
+	printf("Should return 1 when string is ''\n");
+	printf("%d\n", (ft_str_is_alpha("")));
+	printf("Should return 1 when string is 'a'\n");
+	printf("%d\n", (ft_str_is_alpha("a")));
+	printf("Should return 1 when string is 'abz'\n");
+	printf("%d\n", (ft_str_is_alpha("abz")));
+	printf("Should return 1 when string is 'CASA'\n");
+	printf("%d\n", (ft_str_is_alpha("CASA")));
+	printf("Should return 1 when string is 'Z'\n");
+	printf("%d\n", (ft_str_is_alpha("Z")));
+	printf("Should return 0 when string is 'aB5Cd'\n");
+	printf("%d\n", (ft_str_is_alpha("aB5Cd")));
+	printf("Should return 0 when string is '57'\n");
+	printf("%d\n", (ft_str_is_alpha("57")));
+	printf("Should return 0 when string is '?'\n");
+	printf("%d\n", (ft_str_is_alpha("?")));
+}
+
+int	main(void)
+{
+	tests();
+	return (0);
+}
 */
